@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build Project') {
             steps {
-                cmd 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Static Code Analysis (Dummy)') {
