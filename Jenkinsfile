@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-
+    agent any 
+    
+    tools {
+        maven 'maven3.9.4' 
+    }
+   
     stages {
         stage('Clone Git Repository') {
             steps {
