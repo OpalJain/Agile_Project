@@ -17,6 +17,11 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
+        stage('Execute Unit Tests') {
+      		steps {
+        		bat 'mvn test'
+      		}
+    	}
         stage('Static Code Analysis (Dummy)') {
             steps {
                 echo 'Simulating Static Code Analysis...'
