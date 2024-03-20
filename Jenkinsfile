@@ -22,10 +22,10 @@ pipeline {
         		bat 'mvn test'
       		}
     	}
-        stage('Static Code Analysis (Dummy)') {
-            steps {
-                echo 'Simulating Static Code Analysis...'
-            }
+        stage('Static Code Analysis (SonarQube)') {
+        	steps {
+        		echo 'Simulating Static Code Analysis...'
+      		}
         }
         stage('Archive Artifacts') {
             steps {
