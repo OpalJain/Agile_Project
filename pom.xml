@@ -33,7 +33,7 @@
   <profile>
     <id>sonar</id>
     <activation>
-      <activeByDefault>true<</activeByDefault>
+      <activeByDefault>true</activeByDefault>
     </activation>
     <properties>
       <sonar.host.url>
