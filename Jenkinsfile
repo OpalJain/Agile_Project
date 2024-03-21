@@ -24,7 +24,9 @@ pipeline {
     	}
         stage('Static Code Analysis (SonarQube)') {
         	steps {
-        		echo 'Simulating Static Code Analysis...'
+        		withSonarQubeEnv('sonar_server'){
+        		 bat 'mvn clean package sonar:sonar'   
+        		}
       		}
         }
         stage('Archive Artifacts') {
