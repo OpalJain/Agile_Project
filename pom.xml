@@ -5,27 +5,41 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Agile_Project</name>
 <dependencies>
-<dependency>
+  <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-api</artifactId>
     <version>5.10.2</version>
     <scope>test</scope>
-</dependency>
+  </dependency>
 </dependencies>
+	
 <build>
-	<pluginManagement>
-		<plugins>
-        <plugin>
-          <groupId>org.sonarsource.scanner.maven</groupId>
-          <artifactId>sonar-maven-plugin</artifactId>
-          <version>3.10.0.2594</version>
-        </plugin>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.11</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+  <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.sonarsource.scanner.maven</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>3.10.0.2594</version>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.11</version>
+      </plugin>
+    </plugins>
+  </pluginManagement>
+</build>
+<profiles>
+  <profile>
+    <id>sonar</id>
+    <activation>
+      <activeByDefault>true<</activeByDefault>
+    </activation>
+    <properties>
+      <sonar.host.url>
+        http://localhost:9000
+      </sonar.host.url>
+    </properties>
+  </profile>
+</profiles>
 </project>
