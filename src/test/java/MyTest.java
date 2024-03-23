@@ -1,9 +1,9 @@
 import org.junit.jupiter.api.Test;
 
-public class MyTest {
+class MyTest {
 
     @Test
-    public void testAddition() {
+    void testAddition() {
         int result = 2 + 2;
         int expected = 4;
         
