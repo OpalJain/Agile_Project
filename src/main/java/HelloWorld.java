@@ -9,6 +9,8 @@ public class HelloWorld {
 		LOGGER.info("Hello World!");
 		//print how are you?
 		LOGGER.info("How are you?");
+		//print I am good!
+		LOGGER.info("I am good!");
 	}
 
 }
